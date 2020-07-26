@@ -1,0 +1,58 @@
+*markdown-heading-transform.txt*   For Vim version 8.0.   Last change: 2020 Jul 26
+
+
+                    MarkDown Heading Transform    by S0AndS0
+
+
+MarkDown Heading Transform                        *markdown-heading-transform*
+
+1. Leader commands                         |markdown-heading-transform-leader|
+2. Commands                               |markdown-heading-transform-command|
+
+==============================================================================
+1. Leader commands                         *markdown-heading-transform-leader*
+
+                                *h0* *h1* *h2* *h3* *h4*
+<Leader>h{number}               Set heading level for current line. For example
+                                if leader is set to `\` >
+                                        \h3
+
+<                                creates a heading prefixed with three `#` and
+                                to remove heading prefix: >
+                                        \h0
+
+<
+                                Example text: >
+                                        Section title
+<
+                                Example leader command: >
+                                        \h2
+<
+                                Example result: >
+                                        ## Section title
+<
+
+==============================================================================
+2. Commands                               *markdown-heading-transform-command*
+
+                                *H* *:H*
+:H {number}                     Set heading level for current line.
+                                For example:  >
+                                        :H 3
+
+<                                creates a heading prefixed with three `#` and
+                                to remove heading prefix: >
+                                        :H 0
+<
+
+                                Example text: >
+                                        Section title
+<
+                                Example leader command: >
+                                        :H 3
+<
+                                Example result: >
+                                        ### Section title
+<
+
+ vim:tw=78:ts=8:ft=help:norl:

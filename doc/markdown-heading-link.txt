@@ -1,0 +1,54 @@
+*markdown-heading-link.txt*  For Vim version 8.0.  Last change: 2020 Jul 26
+
+
+                  MarkDown Heading Transform      by S0AndS0
+
+
+MarkDown Heading Link                                  *markdown-heading-link*
+
+1. Leader commands                              |markdown-heading-link-leader|
+2. Commands                                    |markdown-heading-link-command|
+
+==============================================================================
+1. Leader commands                              *markdown-heading-link-leader*
+
+                                *hl*
+<Leader>hl                      Make heading link where cursor is at. Example >
+                                   \hl
+
+<                                creates and updates heading link(s)
+
+
+                                Example text: >
+                                   ## Section title
+<
+                                Example leader command: >
+                                   \hl
+<
+                                Example result: >
+                                   ## Section title
+                                   [heading__section_title]: #section-title ""
+<
+
+==============================================================================
+2. Commands                                    *markdown-heading-link-command*
+
+                                *Hl* *:Hl*
+:Hl                             Make heading link where cursor is at. Example >
+                :Hl text of link title
+
+<                                creates and updates heading link(s)
+
+
+                                Example text: >
+                ## Section title
+<
+                                Example leader command: >
+                :Hl text of link title
+<
+                                Example result: >
+                ## Section title
+                [heading__section_title]: #section-title "text of link title"
+<
+
+ vim:tw=78:ts=8:ft=help:norl:
