@@ -20,7 +20,7 @@ endfunction
 
 ""
 " Returns lower-cased string, replacing spaces with dashes and striping non-alpha/numeric characters
-" @param {string} heading_text -
+" @param {string} heading_text - Word to sluggify
 " @return {string}
 " @author S0AndS0
 " @license AGPL-3.0
@@ -39,7 +39,7 @@ endfunction
 
 ""
 " Returns heading ref/tag for linking within document
-" @param {string} slugged_line -
+" @param {string} slugged_line - Slugged string to transmute into heading tag
 " @return {string}
 " @author S0AndS0
 " @license AGPL-3.0
@@ -53,6 +53,8 @@ endfunction
 
 ""
 " Updates heading link references for entire document
+" @param {string} old_reference - Heading reference to search document for
+" @param {string} new_reference - Replacement heading reference
 " @author S0AndS0
 " @license AGPL-3.0
 " @throws Error codes that are **not** E486
@@ -71,7 +73,7 @@ endfunction
 
 ""
 " Adds or updates reference link for heading under cursor postilion
-" @param {string[]|number[]} ... -
+" @param {string[]|number[]} ... - List of words and/or numbers
 " @author S0AndS0
 " @license AGPL-3.0
 " @throws {string} 'Did not detect MarkDown heading!'
@@ -118,4 +120,3 @@ function! MarkDown_Headings_Make_Link(...)
     :startinsert
   endif
 endfunction
-
