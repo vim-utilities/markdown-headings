@@ -1,8 +1,21 @@
 #!/usr/bin/env vim
 
 
-autocmd FileType markdown nnoremap <Leader>hl :call MarkDown_Headings_Make_Link()<cr>
-autocmd FileType markdown command! -nargs=* Hl call MarkDown_Headings_Make_Link(<f-args>)
+autocmd FileType markdown call s:Register_Leader()
+autocmd FileType markdown call s:Register_Commands()
+
+
+""
+" Registers Normal mode leader sequences
+function! s:Register_Leader()
+  nnoremap <Leader>hl :call MarkDown_Headings_Make_Link()<cr>
+endfunction
+
+""
+" Registers Ex mode commands
+function! s:Register_Commands()
+  command! -nargs=* Hl call MarkDown_Headings_Make_Link(<f-args>)
+endfunction
 
 
 ""

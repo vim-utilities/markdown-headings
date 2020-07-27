@@ -1,13 +1,26 @@
 #!/usr/bin/env vim
 
 
-autocmd FileType markdown nnoremap <Leader>h0 :call MarkDown_Heading_Transform(0)<cr>
-autocmd FileType markdown nnoremap <Leader>h1 :call MarkDown_Heading_Transform(1)<cr>
-autocmd FileType markdown nnoremap <Leader>h2 :call MarkDown_Heading_Transform(2)<cr>
-autocmd FileType markdown nnoremap <Leader>h3 :call MarkDown_Heading_Transform(3)<cr>
-autocmd FileType markdown nnoremap <Leader>h4 :call MarkDown_Heading_Transform(4)<cr>
+autocmd FileType markdown call s:Register_Leader()
+autocmd FileType markdown call s:Register_Commands()
 
-autocmd FileType markdown command! -nargs=1 H call MarkDown_Heading_Transform(<f-args>)
+
+""
+" Registers Normal mode leader sequences
+function! s:Register_Leader()
+  nnoremap <Leader>h0 :call MarkDown_Heading_Transform(0)<cr>
+  nnoremap <Leader>h1 :call MarkDown_Heading_Transform(1)<cr>
+  nnoremap <Leader>h2 :call MarkDown_Heading_Transform(2)<cr>
+  nnoremap <Leader>h3 :call MarkDown_Heading_Transform(3)<cr>
+  nnoremap <Leader>h4 :call MarkDown_Heading_Transform(4)<cr>
+endfunction
+
+
+""
+" Registers Ex mode commands
+function! s:Register_Commands()
+  command! -nargs=1 H call MarkDown_Heading_Transform(<f-args>)
+endfunction
 
 
 ""
