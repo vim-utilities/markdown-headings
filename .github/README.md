@@ -295,7 +295,7 @@ ___
 
 
 ```
-Vim plugin that adds short-cuts&#x2F;commands for MarkDown headings
+Vim plugin that adds short-cuts/commands for MarkDown headings
 Copyright (C) 2020 S0AndS0
 
 This program is free software: you can redistribute it and/or modify
