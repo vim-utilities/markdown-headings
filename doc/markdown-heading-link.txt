@@ -1,7 +1,7 @@
 *markdown-heading-link.txt*  For Vim version 8.0.  Last change: 2020 Jul 26
 
 
-                  MarkDown Heading Transform      by S0AndS0
+                  MarkDown Heading Link      by S0AndS0
 
 
 MarkDown Heading Link                                  *markdown-heading-link*
