@@ -30,7 +30,7 @@ endfunction
 function! s:Sluggify(heading_text)
   let l:trimmed_line = substitute(a:heading_text, '^#* ', '', '')
   let l:lowered_line = tolower(l:trimmed_line)
-  let l:sanitized_line = substitute(l:lowered_line, '[^a-z0-9 ]', '', 'g')
+  let l:sanitized_line = substitute(l:lowered_line, '[^a-z0-9_ ]', '', 'g')
   let l:dashed_line = substitute(l:sanitized_line, ' ', '-', 'g')
   let l:slugged_line = substitute(l:dashed_line, '--*', '-', 'g')
   return l:slugged_line
