@@ -14,17 +14,11 @@ Vim plugin that adds short-cuts/commands for MarkDown headings
 
 
 - [:arrow_up: Top of Document][heading__top]
-
 - [:building_construction: Requirements][heading__requirements]
-
 - [:zap: Quick Start][heading__quick_start]
-
 - [&#x1F9F0; Usage][heading__usage]
-
 - [&#x1F5D2; Notes][heading__notes]
-
 - [:card_index: Attribution][heading__attribution]
-
 - [:balance_scale: Licensing][heading__license]
 
 
@@ -38,15 +32,30 @@ Vim plugin that adds short-cuts/commands for MarkDown headings
   "&#x1F3D7; Prerequisites and/or dependencies that this project needs to function properly"
 
 
-Vim should be installed prior to using this plugin, eg...
+This repository requires the [Vim][link__vim_home] text editor to be installed
+the source code is available on [GitHub -- `vim/vim`][link__vim_github], and
+most GNU Linux package managers are able to install Vim directly, eg...
 
 
-```Bash
-sudo apt-get install vim
-```
+- Arch based Operating Systems
+   ```bash
+   sudo packman -Syy
+
+   sudo packman -S gawk make vim
+   ```
+- Debian derived Distributions
+   ```bash
+   sudo apt-get update
+
+   sudo apt-get install gawk make vim
+   ```
 
 
-___
+> Note `gawk` and `make` are only required if **not** utilizing a Vim plugin
+> manager.
+
+
+______
 
 
 ## Quick Start
@@ -58,7 +67,7 @@ ___
 Clone this project...
 
 
-```Bash
+```bash
 mkdir -vp ~/git/hub/vim-utilities
 
 cd ~/git/hub/vim-utilities
@@ -67,12 +76,33 @@ git clone git@github.com:vim-utilities/markdown-headings.git
 ```
 
 
-If **not** utilizing some form of Vim plugin manager, then the `linked-install.sh` may be run on most 'nix devices...
+---
 
 
-```Bash
-./linked-install.sh
+If **not** using a plugin manager, then this plugin may be installed via `make install` command...
+
+
+```bash
+cd ~/git/hub/vim-utilities/markdown-headings
+
+make install
 ```
+
+
+---
+
+
+To upgrade in the future use `make upgrade` command...
+
+
+```bash
+cd ~/git/hub/vim-utilities/markdown-headings
+
+make upgrade
+```
+
+
+---
 
 
 After installation, plugin documentation may be accessed via Vim's `:help` command, eg...
@@ -85,7 +115,7 @@ After installation, plugin documentation may be accessed via Vim's `:help` comma
 ```
 
 
-___
+______
 
 
 ## Usage
@@ -199,7 +229,7 @@ For example for a table of contents similar to...
 ```
 
 
-___
+______
 
 
 ## Notes
@@ -208,28 +238,27 @@ ___
   "&#x1F5D2; Additional things to keep in mind when developing"
 
 
-Notice, some MarkDown interpreters may _sanitize_ symbols within heading text slightly different to GitHub.
+Notice, some MarkDown interpreters may _sanitize_ symbols within heading text
+slightly different to GitHub.
 
+---
 
-This repository may not be feature complete and/or fully functional, Pull Requests that add features or fix bugs are certainly welcomed.
-
+This repository may not be feature complete and/or fully functional, Pull
+Requests that add features or fix bugs are certainly welcomed.
 
 - [Fork][markdown_headings__fork_it] this repository to an account that you have write permissions for.
 
 - Add remote for fork URL. The URL syntax is _`git@github.com:<NAME>/<REPO>.git`_...
 
-
-```Bash
+```bash
 cd ~/git/hub/vim-utilities/markdown-headings
 
 git remote add fork git@github.com:<NAME>/markdown-headings.git
 ```
 
-
 - Commit your changes and push to your fork, eg. to fix an issue...
 
-
-```Bash
+```bash
 cd ~/git/hub/vim-utilities/markdown-headings
 
 
@@ -247,17 +276,21 @@ EOF
 git push fork main
 ```
 
+> Note, the `-u` option may be used to set `fork` as the default remote, eg.
+> _`git push fork main`_ however, this will also default the `fork` remote for
+> pulling from too! Meaning that pulling updates from `origin` must be done
+> explicitly, eg. _`git pull origin main`_
 
-> Note, the `-u` option may be used to set `fork` as the default remote, eg. _`git push fork main`_ however, this will also default the `fork` remote for pulling from too! Meaning that pulling updates from `origin` must be done explicitly, eg. _`git pull origin main`_
+- Then on GitHub submit a Pull Request through the Web-UI, the URL syntax is
+  _`https://github.com/<NAME>/<REPO>/pull/new/<BRANCH>`_
+
+> Note; to decrease the chances of your Pull Request needing modifications
+> before being accepted, please check the
+> [dot-github](https://github.com/vim-utilities/.github) repository for
+> detailed contributing guidelines.
 
 
-- Then on GitHub submit a Pull Request through the Web-UI, the URL syntax is _`https://github.com/<NAME>/<REPO>/pull/new/<BRANCH>`_
-
-
-> Note; to decrease the chances of your Pull Request needing modifications before being accepted, please check the [dot-github](https://github.com/vim-utilities/.github) repository for detailed contributing guidelines.
-
-
-___
+______
 
 
 ## Attribution
@@ -267,25 +300,17 @@ ___
 
 
 - [Dev Hints -- Vim Help](https://devhints.io/vim-help)
-
 - [Gist -- An overview of what belongs in each directory of a Vim plugin](https://gist.github.com/nelstrom/1056049/784e252c3de653e204e9e128653010e19fbd493f)
-
 - [GitHub -- `github-utilities/make-readme`](https://github.com/github-utilities/make-readme)
-
 - [Learn Vimscript the Hard Way -- Function Arguments](https://learnvimscriptthehardway.stevelosh.com/chapters/24.html)
-
 - [StackExchange -- How to write a gvim-help-doc-like text file?](https://stackoverflow.com/questions/5576091/)
-
 - [StackOverflow -- How to insert text from a variable at current cursor position](https://vi.stackexchange.com/questions/21825/)
-
 - [StackOverflow -- Save current line in variable](https://stackoverflow.com/questions/13821350/)
-
 - [StackOverflow -- vim how to pass arguments to functions from user commands](https://stackoverflow.com/questions/3213657/)
-
 - [YouTube -- Start Turning vim into a /comfy/ IDE! -- Luke Smith](https://www.youtube.com/watch?v=Q4I_Ft-VLAg)
 
 
-___
+______
 
 
 ## License
@@ -296,7 +321,7 @@ ___
 
 ```
 Vim plugin that adds short-cuts/commands for MarkDown headings
-Copyright (C) 2020 S0AndS0
+Copyright (C) 2024 S0AndS0
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
@@ -312,14 +337,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ```
 
 
-For further details review full length version of [AGPL-3.0][branch__current__license] License.
+For further details review full length version of
+[AGPL-3.0][branch__current__license] License.
 
 
 
 [branch__current__license]:
   /LICENSE
   "&#x2696; Full length version of AGPL-3.0 License"
-
 
 [badge__commits__markdown_headings__main]:
   https://img.shields.io/github/last-commit/vim-utilities/markdown-headings/main.svg
@@ -328,11 +353,9 @@ For further details review full length version of [AGPL-3.0][branch__current__li
   https://github.com/vim-utilities/markdown-headings/commits/main
   "&#x1F4DD; History of changes on this branch"
 
-
 [markdown_headings__community]:
   https://github.com/vim-utilities/markdown-headings/community
   "&#x1F331; Dedicated to functioning code"
-
 
 [issues__markdown_headings]:
   https://github.com/vim-utilities/markdown-headings/issues
@@ -359,11 +382,11 @@ For further details review full length version of [AGPL-3.0][branch__current__li
 [badge__main__markdown_headings__source_code]:
   https://img.shields.io/github/repo-size/vim-utilities/markdown-headings
 
-
-[vim_home]:
+[link__vim_home]:
   https://www.vim.org
   "Home page for the Vim text editor"
 
-[vim__github]:
+[link__vim_github]:
   https://github.com/vim/vim
   "Source code for Vim on GitHub"
+
