@@ -84,7 +84,7 @@ EOF
 
 
 [[ -d "${HOME}/.vim" ]] || {
-  printf >&2 '\n'
+  printf >&2 'No ~/.vim directory detected for user -> %s\n' "${USER}"
   exit 1
 }
 
