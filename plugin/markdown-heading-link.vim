@@ -62,7 +62,8 @@ endfunction
 " s:Update_Refs('heading__spam_flavored_ham]', 'heading__raspberry_jam]')
 function! s:Update_Refs(old_reference, new_reference)
   try
-    execute ':%s/\[' . a:old_reference . '/\[' . a:new_reference . '/g'
+    execute ':%s/\[\<' . a:old_reference . '\>/\[' . a:new_reference . '/g'
+    " execute ':%s/\[' . a:old_reference . '/\[' . a:new_reference . '/g'
   catch
     if v:exception !~ '^Vim\%((\a\+)\)\=:E486'
       throw v:exception
