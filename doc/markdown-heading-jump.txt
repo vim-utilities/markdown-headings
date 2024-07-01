@@ -1,0 +1,21 @@
+*markdown-heading-jump.txt*   For Vim version 8.0.   Last change: 2024 Jul 01
+
+
+                    MarkDown Heading Jump    by S0AndS0
+
+
+MarkDown Heading Jump                                  *markdown-heading-jump*
+
+1. 1. Motions and operators                     |markdown-heading-jump-leader|
+
+==============================================================================
+1. Motions                                      *markdown-heading-jump-leader*
+
+The following are non-wrapping, I.E. when jumping to the next heading if it is
+the last then no action will be taken, same same if searching backwards.
+
+     |]h|     ]h                Jump forwards to next heading
+     |[h|     [h                Jump backwards to previous heading
+
+
+ vim:tw=78:ts=8:ft=help:norl:
